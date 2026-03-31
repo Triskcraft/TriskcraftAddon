@@ -1,0 +1,34 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos de uv
+uv.lock
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribución / build
+dist/
+build/
+*.egg-info/
+
+# Archivos de entorno
+.env
+.env.*
+
+# Testing / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Logs
+*.log
+
+# Archivos temporales
+tmp/
+temp/
