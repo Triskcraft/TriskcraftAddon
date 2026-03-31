@@ -4,13 +4,15 @@ import shutil
 import sys
 import os
 
+from typing import Any
+
 from mcdis_rcon.classes import McDisClient, Network
 
 class mdaddon():
     def __init__(self, client: McDisClient):
         """Inicializa el addon con el cliente de McDisClient"""
         self.client = client
-        self.persistent_tasks = []
+        self.persistent_tasks: list[asyncio.Task[Any]] = []
         self.config_mdplugins = {
             'SMP':  ['manager.py', 'chatbridge.py', 'join_motd.py', 'calc.py','here.py', 'execute.py', 'reg-bkps.py', 'scoreboard.py','finder.py','terminal.py','tts_addon.py','scoreboards.py','build-event.py','bot.py','ow.py','dis-session.py'],
             'CMP':  ['manager.py', 'chatbridge.py', 'join_motd.py', 'calc.py','here.py', 'op.py', 'execute.py','online.py','finder.py','tts_addon.py','bot.py'],
